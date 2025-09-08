@@ -24,21 +24,10 @@ Bonus:
 - Wrap the printed message with a decorative border of stars (*)
 """
 
-import os
-from datetime import date,datetime
-
-def clear_screen():
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
+from datetime import date
 
 today = date.today()
-now = datetime.now()
-time_now = now.strftime("%H:%M:%S")
-
-
-name = input("Enter your name :").stip()
+name = input("Enter your name :")
 
 while True:
     try:
@@ -47,9 +36,9 @@ while True:
     except ValueError:
         print("Please enter age in numbers only!")
         
-city = input("Enter your city :").stip()
-profession = input("Enter your profession :").stip()
-hobby = input("Enter your hobby :").stip()
+city = input("Enter your city :")
+profession = input("Enter your profession :")
+hobby = input("Enter your hobby :")
 
 
 intro = (
@@ -58,11 +47,11 @@ intro = (
     "Nice to meet you!"
 )
 
-intro += f"\nLogged on: {today} at {time_now}"
+intro += f"\nLogged on: {today}"
 
-border = "*" * (len(intro)-75)
 
-clear_screen()
+border = "*" * (len(intro)-30)
+
 print("\n" + border)
 print(f"*  {intro}  *")
 print(border)
