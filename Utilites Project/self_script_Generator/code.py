@@ -38,7 +38,7 @@ now = datetime.now()
 time_now = now.strftime("%H:%M:%S")
 
 
-name = input("Enter your name :").stip()
+name = input("Enter your name :").strip()
 
 while True:
     try:
@@ -47,9 +47,9 @@ while True:
     except ValueError:
         print("Please enter age in numbers only!")
         
-city = input("Enter your city :").stip()
-profession = input("Enter your profession :").stip()
-hobby = input("Enter your hobby :").stip()
+city = input("Enter your city :").strip()
+profession = input("Enter your profession :").strip()
+hobby = input("Enter your hobby :").strip()
 
 
 intro = (
