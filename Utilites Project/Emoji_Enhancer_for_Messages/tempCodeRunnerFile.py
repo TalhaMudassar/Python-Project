@@ -31,7 +31,7 @@ emoji_map_fun = {
 }
 
 #Enter user messages
-message = input("Enter your message")
+message = "i love to make videos and write code."
 updated_word = []
 
 

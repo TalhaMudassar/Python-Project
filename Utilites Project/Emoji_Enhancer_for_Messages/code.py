@@ -31,9 +31,9 @@ emoji_map_fun = {
 }
 
 #Enter user messages
-message = input("Enter your message")
+message = input("Enter your message: ")
 updated_word = []
-
+        
 
 #process each word
 for word in message.split():
