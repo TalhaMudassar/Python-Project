@@ -47,7 +47,16 @@ print("1.Simple lines ")
 print("2.Vertical Flares")
 print("3.Emoji sandwich")
 
-style = input("Enter 1,2 and 3 ").strip()
+
+while True:
+    style = input("Enter 1, 2 or 3: ").strip()
+    if style in ["1", "2", "3"]:
+        print(f"You selected: {style}")
+        break   # exit loop if input is valid
+    else:
+        print("Invalid choice! Please enter only 1, 2, or 3.")
+
+
 
 def generater_bio(style):
     if style == "1":
@@ -71,8 +80,8 @@ option = input("YOU WANT TO SAVE YOU BIO IN TEXT FILE (y/n)").lower().strip()
 
 if option == 'y':
     file_name = f"{name.lower().replace(' ','_')}_bio.txt"
-    with open(file_name,"w",encoding="uft8") as w:
-        w.write(bio)
+    with open(file_name,'w',encoding="utf8") as f:
+        f.write(bio)
     print("file saved")
         
 else:
