@@ -36,39 +36,26 @@ def check_passward_strength(password):
         issues.append("Missing Special Character")
     return issues
 
-
-
 def generate_strong_password(length=12):
-    chars = string.ascii_letters + string.digits + string.punctuation
-    return "".join(random.choice(chars) for _ in range(length))
-
-
-
-
-
-#equally distributed from lowercase upper case and others .........
-
-# def generate_strong_password(length=12):
-#     char_lower = "abcdefg"
-#     char_upper = "ABCDEFG"
-#     char_special = "!@#$^&*"
+    char_lower = "abcdefg"
+    char_upper = "ABCDEFG"
+    char_special = "!@#$^&*"
     
-#     groups = [char_lower,char_special,char_upper]
+    groups = [char_lower,char_special,char_upper]
     
-#     password_char = []
-#     divider = length // len(groups)
-#     reminder = length % len(groups)
+    password_char = []
+    divider = length // len(groups)
+    reminder = length % len(groups)
     
-#     for g in groups:
-#         password_char.extend(random.choice(g) for _ in range(divider))
+    for g in groups:
+        password_char.extend(random.choice(g) for _ in range(divider))
     
     
-#     for _ in range(reminder):
-#         g = random.choice(groups)
-#         password_char.extend(random.choice(g))
+    for _ in range(reminder):
+        g = random.choice(groups)
+        password_char.extend(random.choice(g))
         
-#     random.shuffle(password_char)
-#     return "".join(password_char)
+    random.shuffle(password_char)
     
 
 
