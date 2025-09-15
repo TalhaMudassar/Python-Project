@@ -61,7 +61,7 @@ def display_tasks(tasks):
         print("No task found")
     else:
         for i ,task in enumerate(tasks,1):
-            check_box = "✅" if task["done"] else "❌"
+            check_box = "✅" if task["done"] else " "
             print(f"{i}. [{check_box}] {task['text']}")
             
             
