@@ -58,7 +58,7 @@ def decrupt(messages,key):
 
 
 while True:
-  
+    os.system('cls')
     print("Secert Message Program")
     choices = input("Do you want to E or D and X for exit the program ").strip().lower()
 
@@ -67,7 +67,7 @@ while True:
         text = input("Enter your message  \n")
         try:
             key = int(input("Enter a Number between 1 and 25 "))
-            os.system('cls')
+            # os.system('cls')
             result = encrypt(text,key)
             print("\n Encrypted Message: ")
             print(result) 
@@ -78,7 +78,7 @@ while True:
         text = input("Enter your Encrypted Message\n")
         try:
             key = int(input("Please enter your 1 letter key b/w 1 - 25"))
-            os.system('cls')
+            # os.system('cls')
             result = decrupt(text,key)
             print("\n Decrypted Message: ")
             print(result)
