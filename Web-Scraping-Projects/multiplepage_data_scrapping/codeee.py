@@ -73,4 +73,3 @@ if __name__ == "__main__":
     main()
         
         
-# scrap_page(BASE_URL)
