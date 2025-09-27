@@ -66,5 +66,6 @@ def scrape_and_download_images():
     print("All 10 books covered dowmloaded to images ")
     
     
+    #main function
 if __name__=="__main__":
     scrape_and_download_images()
