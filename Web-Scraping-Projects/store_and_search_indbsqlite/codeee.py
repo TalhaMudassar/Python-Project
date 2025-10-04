@@ -75,7 +75,7 @@ def search_coin(coin_name):
     conn.close()
     # print("Result Raw ",result)
     if result:
-        print(f"${result[1]}")
+        print(f"${result[1]} --  {result[0]}")
     
  
 def main():
