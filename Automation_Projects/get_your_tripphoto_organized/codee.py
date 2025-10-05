@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     # Validate folder path
     if not os.path.isdir(folder):
-        print("❌ Invalid folder path.")
+        print(" Invalid folder path.")
     else:
         # Get base name (e.g., 'image')
         base_name = input("Enter base name for files: ").strip()
