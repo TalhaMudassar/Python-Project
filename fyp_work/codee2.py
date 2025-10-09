@@ -40,9 +40,8 @@ plt.figure(figsize=(10, 6)) # Adjusted figure size for shorter labels
 for index, row in df_month.iterrows():
     plt.barh(row['Phase Summary'], (row['End'] - row['Start']).days, left=row['Start'], color="lightgreen", edgecolor="darkgreen", height=0.6) # Changed color and added height
 
-plt.xlabel("Timeline", fontsize=12)
-plt.ylabel("Project Phases", fontsize=12)
-plt.title("Project Schedule Overview", fontsize=16, weight="bold")
+
+plt.title("Project Schedule (Gantt chart)", fontsize=16, weight="bold")
 
 # Reverse the y-axis for chronological order from top
 plt.gca().invert_yaxis()

@@ -38,21 +38,29 @@ plt.figure(figsize=(10, 6))
 
 # Iterate using iterrows to safely handle column names
 for index, row in df_month.iterrows():
-    # Set color to "skyblue" and edgecolor to "steelblue"
     plt.barh(row['Phase Summary'], (row['End'] - row['Start']).days, left=row['Start'], color="skyblue", edgecolor="steelblue", height=0.6)
 
-plt.title("Project Schedule (Gantt chart)", fontsize=16, weight="bold")
+plt.xlabel("Timeline", fontsize=12)
+plt.ylabel("Project Phases", fontsize=12)
+plt.title("Project Schedule Overview (Grid Style)", fontsize=16, weight="bold")
 
 # Reverse the y-axis for chronological order from top
 plt.gca().invert_yaxis()
 
-plt.grid(True, axis='x', linestyle='--', alpha=0.7)
+# --- Changes for square box grid ---
+# Set both x and y grid to True and adjust linestyle and alpha for visibility
+plt.grid(True, axis='both', linestyle=':', alpha=0.7, color='gray') # Changed to dotted lines for a subtle grid
+
+# Set major locators for the y-axis to create horizontal grid lines for each phase
+plt.gca().yaxis.set_major_locator(plt.MaxNLocator(integer=True)) # Ensures a tick for each phase
+# --- End changes ---
+
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%b-%Y'))
 plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 
 # Save the new chart
-output_path = "Sky_Blue_Gantt_Chart.png"
+output_path = "Gantt_Chart_With_Square_Grid.png"
 plt.savefig(output_path, dpi=300)
-# print(output_path)
+print(output_path)
